@@ -9,12 +9,12 @@
 </head>
 <body>
     <center>
-        <from>
+        <from method="Post" action="index.php?controller=Usuario&action=verificarCredenciales">
             <label> Correo: </label></from><br>
-            <input type="text">
+            <input type="text" name="correo" value="" required>
             <br>
             <label> password: </label></from><br>
-            <input type="password">
+            <input type="password" name="pass" value="" required>
         </from>
     </center>
 </body>

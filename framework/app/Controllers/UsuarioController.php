@@ -21,7 +21,7 @@ class UsuarioController
         $suma=$n1+$n2;
         echo $suma;
     }
-    public function crea()
+    /*public function crea()
     {
         $usuario= new usuario();
         var_dump($usuario);
@@ -49,5 +49,22 @@ class UsuarioController
 
         }
         print_r($newNom);
+    }*/
+    function login()
+    {
+    require "app/Views/login.php";
+
+    }
+    function verficarCredenciales()
+    {
+        if((!isset($_POST["correo"]) ||(!isset($_POST["pass"]))))
+        {
+            echo "Datos incorrectos";
+            return false;
+        }
+        $correo=$_POST["correo"];
+        $password=$_POST["pass"];
+        echo $correo;
+        echo "<br>$password";
     }
 }
