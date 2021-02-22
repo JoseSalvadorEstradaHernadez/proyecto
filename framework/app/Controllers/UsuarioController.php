@@ -50,21 +50,22 @@ class UsuarioController
         }
         print_r($newNom);
     }*/
-    function login()
+    public function login()
     {
     require "app/Views/login.php";
 
     }
-    function verficarCredenciales()
+    public function verficarCredenciales()
     {
-        if((!isset($_POST["correo"]) ||(!isset($_POST["pass"]))))
-        {
+        if ((!isset($_POST['correo']) || (!isset($_POST['pass'])))) {
+
             echo "Datos incorrectos";
+
             return false;
         }
-        $correo=$_POST["correo"];
-        $password=$_POST["pass"];
+        $correo = $_POST['correo'];
+        $password = $_POST['pass'];
         echo $correo;
-        echo "<br>$password";
+        echo "<br>".$password;
     }
 }

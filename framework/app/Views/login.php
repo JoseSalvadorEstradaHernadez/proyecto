@@ -9,12 +9,15 @@
 </head>
 <body>
     <center>
-        <from method="Post" action="index.php?controller=Usuario&action=verificarCredenciales">
-            <label> Correo: </label></from><br>
-            <input type="text" name="correo" value="" required>
+        <from method="POST" action="index.php?controller=Usuario&action=verificarCredenciales">
+            <label> Correo: </label><br>
+            <input type="text" name="correo" required>
             <br>
-            <label> password: </label></from><br>
-            <input type="password" name="pass" value="" required>
+            <label> password: </label><br>
+            <input type="password" name="pass" required>
+        <br>
+        <br>
+            <button type="submit" class="btn btn-default"> enviar</button>
         </from>
     </center>
 </body>
